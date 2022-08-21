@@ -45,12 +45,13 @@ try:
 #### follow the project directions to create a function which makes a bar chart in matplotlib using the total revenue from each product category
     def create_bar_chart():
         figure=plt.figure()
+        figure.subplots_adjust(bottom=.25)
         data=total_revenue
         labels=product_category
         plt.xticks(
             range(len(data)),
             (label for label in labels),
-            rotation=75
+            rotation=75,
         )
         plt.xlabel('Product Category')
         plt.ylabel('Revenue(USD)')
